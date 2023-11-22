@@ -9,5 +9,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  publicPath: process.env.NODE_ENV === 'production' ? 'Click-Shop' : '/' 
+  publicPath: process.env.NODE_ENV === 'production' ? 'Arneel-Web-Studio' : '/' 
 })
