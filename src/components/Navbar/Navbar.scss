@@ -1,0 +1,280 @@
+@mixin media($size) {
+    @media (max-width:#{$size}px) {
+        @content;
+    }
+}
+
+.menu__list {
+    display: flex;
+    gap: 30px;
+}
+
+.header {
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 4px 24px 0px rgba(34, 41, 47, 0.10);
+}
+
+.header__container {
+    height: 80px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    padding: 10px;
+    position: relative;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: white;
+    display: inline block;
+}
+
+
+.menu__item a {
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    color: white;
+    transition: 0.5s;
+    display: block;
+}
+
+.menu__item {
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    color: white;
+    transition: 0.5s;
+    display: block;
+    position: relative;
+    @include media(992px){
+        font-size: 500px;
+    }
+}
+
+.menu__item a:hover {
+    color: $fit;
+}
+
+.menu__item a::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $fit;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu__item a:hover::after {
+    width: 100%;
+    color: $fit;
+}
+
+.btn {
+    max-width: 166px;
+    width: 100%;
+    padding: 17px 10px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 12px;
+    color: $white;
+    text-align: center;
+    border-radius: 4px;
+    background: $fit;
+    transition: 500ms;
+    display: inline-block;
+    border: none;
+}
+
+
+.btn:hover {
+    background: #7a6fde;
+    color: var(--black);
+}
+
+.list_link_li a:hover::after {
+    width: auto;
+    left: 0;
+}
+
+
+.header__menu {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.header__menu span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link {
+    font-size: 16px;
+}
+
+.ruen {
+    width: 22px;
+}
+
+.nav__list_link a:hover,
+.nav__dropdown_link a:hover {
+    color: #41A28E;
+
+}
+
+.nav__list_link:hover .nav__dropdown {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 500000;
+
+
+}
+
+.nav__list_link:hover .triangle {
+    opacity: 0;
+}
+
+.nav__list_link:hover .tr_up {
+    opacity: 1;
+}
+
+
+.nav__dropdown {
+    width: 160px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    position: absolute;
+    top: 60px;
+    transform: translateY(50px);
+    transition: 0.7s;
+    opacity: 0;
+    z-index: 5;
+}
+
+.nav__dropdown_link a {
+    padding: 12px 0 12px 30px;
+    display: inline-block;
+    font-family: $comfortaa;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 16px;
+    color: #000000;
+    z-index: 5px;
+}
+
+.header__menu span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__menu span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .header__menu span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__menu span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__menu span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+/* .header__content{
+  background: #040D1F;
+} */
+
+.header__content_text {
+    color: white;
+    max-width: 600px;
+    font-size: 30px;
+    font-family: $comfortaa;
+    font-weight: 700;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    display: block;
+    z-index: 2;
+    padding: 10px;
+}
+
+.nav__dropdown_link:not(:last-child) {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.header__menu_one {
+    width: 30px !important;
+}
+
+.header__menu_two {
+    width: 25px !important;
+}
+
+.header__menu_three {
+    width: 15px !important;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.e {
+    margin-top: 20px;
+    display: none;
+
+    @include media(992px) {
+        display: block;
+    }
+}
+
+.call {
+    margin-top: 20px;
+    display: none;
+}
+
+
+.active{
+    color: $fit !important;
+    font-weight: bold !important;
+    transition: 0.3s;
+}
+
+.spsp{
+    display: none;
+}
+
+.contacts{
+    display: none;
+}

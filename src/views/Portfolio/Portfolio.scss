@@ -1,0 +1,49 @@
+.main__all_cards {
+    width: 375px;
+    height: 550px;
+    background: #0C0C0C;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    padding: 15px;
+    transition: 0.7s;
+
+    a{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.main__all_cards:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.main__cards_title {
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.main__cards_title span {
+    color: $fit;
+}
+
+
+.main__cards_text {
+    font-family: $montserrat;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+}   
+
+.img{
+    height: 300px;
+    width: 325px;
+    object-fit: cover;
+    margin: 0px 0px 25px 0px;
+    border: 2px solid white;
+}

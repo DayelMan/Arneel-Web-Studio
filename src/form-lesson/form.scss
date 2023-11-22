@@ -1,0 +1,171 @@
+.popap {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(18, 18, 17, 0.2);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__content {
+        width: 600px;
+        background: $white;
+        // height: 600px;
+        border-radius: 10px;
+        position: relative;
+        padding: 15px;
+
+        &-title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-family: $montserrat;
+            color: rgb(42 35 103);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        &_close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+}
+
+.iu {
+    cursor: pointer;
+}
+
+.button__close {
+    cursor: pointer;
+    width: 20px;
+}
+
+.form {
+    width: 400px;
+    margin-top: 30px;
+
+    .input {
+        &_one {
+            margin-bottom: 1.75rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__label {
+        color: #7E7E7E;
+        font-family: $montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        /* 155.556% */
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        border-bottom: 1.111px solid #E5E7EB;
+        padding: 1.11px 0px 7.97px 0px;
+
+        &_place {
+            color: #9CA3AF;
+            font-family: $montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__textarea {
+        border: 1.111px solid #E5E7EB;
+        color: #9CA3AF;
+        font-family: $montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        outline: none;
+        /* 150% */
+        padding: 10px;
+        resize: none;
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    &__btn {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        opacity: 0.6;
+        background: #6B5AF9;
+        height: 64.01px;
+        padding: 21.11px 0px 22.9px 0px;
+        cursor: pointer;
+
+        &-text {
+            color: $white;
+            text-align: center;
+            font-family: $montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+
+    &__teext {
+        color: #9895B4;
+        font-family: $montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        /* 133.333% */
+        margin-top: 1.5rem;
+
+        & span {
+            color: #6B5AF9;
+            cursor: pointer;
+        }
+    }
+}
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}

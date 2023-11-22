@@ -1,0 +1,86 @@
+.main__text {
+    font-size: 36px;
+    color: black;
+    font-family: $montserrat;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.main__text span {
+    color: var(--fit);
+}
+
+.main__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main__all_cards_what {
+    width: 450px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 30px;
+    transition: background-color 0.2s ease 0s;
+    opacity: 1;
+    transform: none;
+    padding: 10px;
+    background-color: rgb(255 255 255);
+    border-radius: 5px;
+}
+
+   .main__all_cards_what:hover{
+    background: #E37575;
+}
+
+.main__cards_tatle {
+    font-size: 60px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 4px 8px;
+    color: rgb(255 255 255);
+}
+
+.main__cards_taxt {
+    font-size: 16px;
+    font-family: $montserrat;
+    font-weight: 600;
+    color: rgb(42 35 103);
+}
+
+.redblock {
+    background-color: rgb(227 117 117);
+    width: 45%;
+    height: 2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.main__cards__taxt {
+    font-size: 12px;
+    font-family: $montserrat;
+    font-weight: 400;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+.btns {
+    font-size: 15px;
+    max-width: 294px;
+    height: 45px;
+    text-align: center;
+}
+
+.sitebar__btn{
+    display: flex;
+    justify-content: center;
+}
+
+.sitebar__btns:hover{
+   transform: scale(1.2);
+}
+
+.sitebar{
+    padding: 30px;
+}
